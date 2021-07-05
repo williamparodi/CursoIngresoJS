@@ -5,7 +5,7 @@ function mostrar()
 {
 	let nombre; //declaro la variable nombre
 
-	nombre = prompt("Ingrese su nombre"); // y la inicializo.
+	nombre = prompt("Ingrese su nombre"); // y la inicializo
 
 	alert(nombre); 
 
