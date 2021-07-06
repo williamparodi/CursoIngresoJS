@@ -3,11 +3,16 @@ Debemos lograr tomar un nombre con 'prompt'
 y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	let nombre; //declaro la variable nombre
+	var nombreIngresado;
 
-	nombre = prompt("Ingrese su nombre"); // y la inicializo
+	nombreIngresado = prompt("Ingrese su nombre");
 
-	alert(nombre); 
+	alert("Ustedes se llama " + nombreIngresado);
+
+	
+ // formas de salidas : cosole.log / alert / document.write
+  
+ // Entradas : prompt , Id.value , getElementById("")
 
 }
 

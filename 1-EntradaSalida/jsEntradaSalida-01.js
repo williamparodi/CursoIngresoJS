@@ -5,7 +5,12 @@ function mostrar()
 {
 	alert("Esto funciona de maravilla");
 
-    //esto es un comentario
+	/* Esto es un comentario 
+
+	largo */
+
+	//esto es un comentario corto
+
     
 }
 
