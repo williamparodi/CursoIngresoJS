@@ -18,7 +18,9 @@ function sumar()
 
 	alert("La suma es " + resultado);
 	
-
+	/*Entrada: dos numeros
+	  Procesos: realizar la suma de los numeros
+	  salidas: la suma de los numeros */
 
 
 

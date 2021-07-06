@@ -53,7 +53,7 @@ function multiplicar()
 
 	resultado = numero1 * numero2;
 
-	alert("La multiplición es " + resultado);
+	alert("La multiplición da " + resultado);
 
 
 }
