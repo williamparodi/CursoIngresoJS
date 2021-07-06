@@ -11,15 +11,12 @@ function mostrarAumento()
 
 	sueldo = document.getElementById("txtIdSueldo").value;
     
-    aumento = 1.10;
-
-    sueldo = parseInt(sueldo);
-    aumento = parseFloat(aumento);
+    sueldo = parseFloat(sueldo);// Preguntar se esta bien pasarlo a entero/decimal en una linea a parte.
     
-    resultado = sueldo * aumento;
-
-
-
+    aumento = sueldo * 10 / 100;
     
-    document.getElementById("txtIdResultado").value = resultado;							
+    resultado = sueldo + aumento;
+
+    document.getElementById("txtIdResultado").value = resultado;
+
 }
