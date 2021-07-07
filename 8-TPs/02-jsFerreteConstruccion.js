@@ -10,24 +10,55 @@ function Rectangulo ()
 	var ancho;
 	var alambre;
 
-	largo = parseInt(document.getElementById("txtIdLargo").value);
-	ancho = parseInt(document.getElementById("txtIdAncho").value);
+	largo = document.getElementById("txtIdLargo").value;
+	ancho = document.getElementById("txtIdAncho").value;
+
+	largo = parseFloat(largo);
+	ancho = parseFloat(ancho);
 
 	largo = largo * 2;
 	ancho = ancho *2;
 
 	alambre = largo + ancho;
 
-	alert(alambre);
-
-
+	alert("Se necesitan " + alambre + " metros de alambre");
 
 }
 function Circulo () 
 {
-	
+	var radio;
+	var alambre;
+
+	radio = document.getElementById("txtIdRadio").value;
+
+	radio = parseFloat(radio);
+
+	alambre = 2 * 3.1416 * radio;
+
+	alert("Se necesitan " + alambre + " metros de alambre");
+
 }
 function Materiales () 
 {
+	var largo;
+	var ancho;
+	var cemento;
+	var cal;
+	
+
+
+	largo = document.getElementById("txtIdLargo").value;
+	ancho = document.getElementById("txtIdAncho").value;
+
+	largo = parseFloat(largo);
+	ancho = parseFloat(ancho);
+
+    metrosCuadrados = largo * ancho;
+    cemento = metrosCuadrados * 2;
+    cal = metrosCuadrados * 3;
+
+    alert("Se necesitan " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
+
+
 	
 }

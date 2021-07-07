@@ -10,9 +10,13 @@ function Sumar ()
 	var precioTres;
 	var precioTotal;
 
-	precioUno = parseFloat(document.getElementById("txtIdPrecioUno").value);
-	precioDos = parseFloat(document.getElementById("txtIdPrecioDos").value);
-	precioTres = parseFloat(document.getElementById("txtIdPrecioTres").value);
+	precioUno = document.getElementById("txtIdPrecioUno").value;
+	precioDos = document.getElementById("txtIdPrecioDos").value;
+	precioTres = document.getElementById("txtIdPrecioTres").value;
+
+	precioUno = parseFloat(precioUno);
+	precioDos = parseFloat(precioDos);
+	precioTres = parseFloat(precioTres);
     
     precioTotal = precioUno + precioDos + precioTres;
 
@@ -27,10 +31,14 @@ function Promedio ()
 	var precioTotal;
 	var promedio;
 
-	precioUno = parseFloat(document.getElementById("txtIdPrecioUno").value);
-	precioDos = parseFloat(document.getElementById("txtIdPrecioDos").value);
-	precioTres = parseFloat(document.getElementById("txtIdPrecioTres").value);
-    
+	precioUno = document.getElementById("txtIdPrecioUno").value;
+	precioDos = document.getElementById("txtIdPrecioDos").value;
+	precioTres = document.getElementById("txtIdPrecioTres").value;
+
+	precioUno = parseFloat(precioUno);
+	precioDos = parseFloat(precioDos);
+	precioTres = parseFloat(precioTres);
+	
     precioTotal = precioUno + precioDos + precioTres;
 
     promedio = precioTotal / 3;
@@ -47,9 +55,13 @@ function PrecioFinal ()
 	var iva;
 	var precioConIva;
 
-	precioUno = parseFloat(document.getElementById("txtIdPrecioUno").value);
-	precioDos = parseFloat(document.getElementById("txtIdPrecioDos").value);
-	precioTres = parseFloat(document.getElementById("txtIdPrecioTres").value);
+	precioUno = document.getElementById("txtIdPrecioUno").value;
+	precioDos = document.getElementById("txtIdPrecioDos").value;
+	precioTres = document.getElementById("txtIdPrecioTres").value;
+
+	precioUno = parseFloat(precioUno);
+	precioDos = parseFloat(precioDos);
+	precioTres = parseFloat(precioTres);
 
 	precioTotal = precioUno + precioDos + precioTres;
 
