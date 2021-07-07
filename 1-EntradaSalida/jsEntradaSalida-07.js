@@ -66,8 +66,8 @@ function dividir()
 	numero1 = document.getElementById("txtIdNumeroUno").value;
 	numero2 = document.getElementById("txtIdNumeroDos").value;
 
-	numero1 = parseInt(numero1);
-	numero2 = parseInt(numero2);
+	numero1 = parseFloat(numero1);
+	numero2 = parseFloat(numero2);
 
 	resultado = numero1 / numero2;
 
