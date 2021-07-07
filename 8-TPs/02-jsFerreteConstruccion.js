@@ -19,7 +19,7 @@ function Rectangulo ()
 	largo = largo * 2;
 	ancho = ancho *2;
 
-	alambre = largo + ancho;
+	alambre = (largo + ancho) * 3;
 
 	alert("Se necesitan " + alambre + " metros de alambre");
 
@@ -27,13 +27,17 @@ function Rectangulo ()
 function Circulo () 
 {
 	var radio;
+	var circunferencia;
 	var alambre;
 
 	radio = document.getElementById("txtIdRadio").value;
 
 	radio = parseFloat(radio);
 
-	alambre = 2 * 3.1416 * radio;
+	circunferencia = 2 * 3.1416 * radio;
+    alambre = circunferencia * 3;
+
+    alambre = alambre.toFixed(2);
 
 	alert("Se necesitan " + alambre + " metros de alambre");
 
@@ -42,6 +46,7 @@ function Materiales ()
 {
 	var largo;
 	var ancho;
+	var metrosCuadrados;
 	var cemento;
 	var cal;
 	
