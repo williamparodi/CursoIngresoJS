@@ -6,7 +6,7 @@ function mostrar()
 
 	if(edad = 15)
 	{
-		alert("Niña Bonita");
+		alert("Niña Bonita");// Se cumple la condición
 	}
 
 
