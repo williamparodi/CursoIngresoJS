@@ -7,16 +7,27 @@ function FahrenheitCentigrados ()
 	var gradosFahrenheit;
 	var gradosCentigrados;
 
-	gradosFahrenheit = parseFloat(document.getElementById("txtIdTemperatura").value);
+	gradosFahrenheit = document.getElementById("txtIdTemperatura").value;
     
-    gradosCentigrados = gradosFahrenheit - 32;
+    gradosFahrenheit = parseFloat(gradosFahrenheit);
+
+    gradosCentigrados = (gradosFahrenheit - 32) / 1.8;
     
-    alert(gradosFahrenheit + " grados Fahrenheit son " + gradosCentigrados + " grados centigrados centigrados");
+    alert(gradosFahrenheit + " grados Fahrenheit son " + gradosCentigrados.toFixed(2) + " grados centigrados centigrados");
 
 
 }
 
 function CentigradosFahrenheit () 
 {
+	var gradosFahrenheit;
+	var gradosCentigrados;
+    
+    gradosCentigrados = document.getElementById("txtIdTemperatura").value;
 	
+	gradosCentigrados = parseFloat(gradosCentigrados);
+
+	gradosFahrenheit = gradosCentigrados * 1.8 + 32;
+
+	alert(gradosCentigrados + " grados centigrados son " + gradosFahrenheit.toFixed(2) + " grados Fahrenheit ")
 }

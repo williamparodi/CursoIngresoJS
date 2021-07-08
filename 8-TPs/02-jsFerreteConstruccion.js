@@ -17,9 +17,9 @@ function Rectangulo ()
 	ancho = parseFloat(ancho);
 
 	largo = largo * 2;
-	ancho = ancho *2;
+	ancho = ancho * 2;
 
-	alambre = (largo + ancho) * 3;
+    alambre = (largo + ancho) * 3;
 
 	alert("Se necesitan " + alambre + " metros de alambre");
 
