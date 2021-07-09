@@ -50,9 +50,7 @@ function Materiales ()
 	var cemento;
 	var cal;
 	
-
-
-	largo = document.getElementById("txtIdLargo").value;
+    largo = document.getElementById("txtIdLargo").value;
 	ancho = document.getElementById("txtIdAncho").value;
 
 	largo = parseFloat(largo);
@@ -63,7 +61,4 @@ function Materiales ()
     cal = metrosCuadrados * 3;
 
     alert("Se necesitan " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
-
-
-	
 }

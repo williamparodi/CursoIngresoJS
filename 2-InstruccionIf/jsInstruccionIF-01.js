@@ -4,7 +4,7 @@ function mostrar()
 
 	edad = document.getElementById("txtIdEdad").value;
 
-	if(edad = 15)
+	if(edad == 15)
 	{
 		alert("Niña Bonita");// Se cumple la condición
 	}

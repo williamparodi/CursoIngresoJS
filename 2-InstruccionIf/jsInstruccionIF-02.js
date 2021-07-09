@@ -6,7 +6,7 @@ function mostrar()
 
 	if(edad >= 18)
 	{
-		alert("Usted es mayor de edad")
+		alert("Usted es mayor de edad");
 	}
 	
 
