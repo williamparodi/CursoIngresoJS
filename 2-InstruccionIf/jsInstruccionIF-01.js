@@ -1,14 +1,21 @@
+
 function mostrar()
 {
-	var edad;
+  var edad;
 
-	edad = document.getElementById("txtIdEdad").value;
+  edad = document.getElementById("txtIdEdad").value;
 
-	if(edad == 15)
-	{
-		alert("Niña Bonita");// Se cumple la condición
-	}
-
+  if(edad == 15)
+  {
+  	alert("Niña bonita");
+  }
 
 
 }//FIN DE LA FUNCIÓN
+
+/* if (condición) verdadera o falsa
+{
+   ...codigo
+}
+...
+*/
