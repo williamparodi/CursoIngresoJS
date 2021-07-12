@@ -6,6 +6,9 @@ function mostrar()
   var peso2;
   var pesoTotal;
   var promedioPeso;
+  var mensajeNombre;
+  var mensajeKilos;
+  var mensajePromedio;
 
   nombre = prompt("Ingrese su nombre");
   nombre2 = prompt("Ingrese el nombre de su pareja");
@@ -18,5 +21,9 @@ function mostrar()
   pesoTotal = peso + peso2;
   promedioPeso = pesoTotal / 2;
 
-  alert("Ustedes se llaman " + nombre + " y " + nombre2 + " y pesan " + peso + " kilos  y " + peso2 + " kilos que sumado son " + pesoTotal + " kilos y el promedio de peso es " + promedioPeso + " kilos");
+  mensajeNombre =" Ustedes se llaman " +nombre+ " y " +nombre2;
+  mensajeKilos =" y pesan " +peso+ " y " +peso2+ " kilos que sumado son " +pesoTotal+ " kilos ";
+  mensajePromedio =" el promedio de peso es de " +promedioPeso+ " kilos ";
+
+  alert(mensajeNombre+mensajeKilos+mensajePromedio);
 }

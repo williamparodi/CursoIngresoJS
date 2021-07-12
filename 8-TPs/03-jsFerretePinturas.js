@@ -11,9 +11,9 @@ function FahrenheitCentigrados ()
     
     gradosFahrenheit = parseFloat(gradosFahrenheit);
 
-    gradosCentigrados = (gradosFahrenheit - 32) / 1.8;
+    gradosCentigrados = (gradosFahrenheit-32) /1.8;
     
-    alert(gradosFahrenheit + " grados Fahrenheit son " + gradosCentigrados.toFixed(2) + " grados centigrados centigrados");
+    alert(gradosFahrenheit+ " grados Fahrenheit son " +gradosCentigrados.toFixed(2)+ " grados centigrados centigrados");
 
 
 }
@@ -27,7 +27,7 @@ function CentigradosFahrenheit ()
 	
 	gradosCentigrados = parseFloat(gradosCentigrados);
 
-	gradosFahrenheit = gradosCentigrados * 1.8 + 32;
+	gradosFahrenheit = gradosCentigrados*1.8 +32;
 
-	alert(gradosCentigrados + " grados centigrados son " + gradosFahrenheit.toFixed(2) + " grados Fahrenheit ")
+	alert(gradosCentigrados+ " grados centigrados son " +gradosFahrenheit.toFixed(2)+ " grados Fahrenheit ")
 }
