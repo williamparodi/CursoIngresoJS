@@ -17,5 +17,8 @@ function mostrar()
 {
    ...codigo
 }
-...
+ Operadores 
+ aritmeticos: +;-;*;/;%.
+ relacionales = <;>;<=;>=;==;!=.
+ logicos: &&(y) o (||) no(!)  
 */
