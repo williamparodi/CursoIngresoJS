@@ -1,3 +1,4 @@
+
 function mostrar()
 {
 	var numeroRandom;

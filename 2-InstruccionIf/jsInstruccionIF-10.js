@@ -11,7 +11,7 @@ function mostrar()
 	}
     else
     {
-    	if(notaRandom >4 && notaRandom <9)
+    	if(notaRandom >4)
     	{
     		alert("Nota de examen: " +notaRandom+ " Aprobo");
     	}
@@ -21,9 +21,4 @@ function mostrar()
     	}
 
     }
-    console.log(notaRandom);
-
-
-    
-
 }//FIN DE LA FUNCIÓN
