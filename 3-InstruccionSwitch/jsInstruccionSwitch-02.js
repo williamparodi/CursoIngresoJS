@@ -5,11 +5,6 @@ si ya paso el Invierno: "Ya pasamos el frio, ahora calor!!!."
 ACLARAcIÓN: tomamos a Julio y Agosto como los meses de Invierno.*/
 
 
-
-
-
-
-
 function mostrar()
 {
 	var mes;
