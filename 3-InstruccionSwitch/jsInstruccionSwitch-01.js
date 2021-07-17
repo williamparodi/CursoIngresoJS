@@ -18,12 +18,12 @@ function mostrar()
 			mensaje = "Que comiences bien el año!!"
 		break;
 		case "Marzo":
-			mensaje = "A clase!!"
+			mensaje = "A clases!!"
 		break;
 		case "Julio":
-			mensaje = "Se viene las vacaciones"
+			mensaje = "Se vienen las vacaciones"
 		break;
-		case "Diciembre"
+		case "Diciembre":
 			mensaje = "Felices Fiestas"
 		break;
 		default:
