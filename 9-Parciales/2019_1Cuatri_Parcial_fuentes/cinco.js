@@ -30,10 +30,10 @@ function mostrar()
 			switch(formaDePago)
 			{
 				case "debito":
-					descuento = precio * 0.60;
+					descuento = 0.60;
 				break;
 				default:
-					descuento = precio * 0.50;
+					descuento = 0.50;
 				break;
 			}
 		break;
@@ -42,22 +42,22 @@ function mostrar()
 			{
 				case "mercadopago":
 				case "efectivo":
-					descuento = precio * 0.75;
+					descuento = 0.75;
 				break;
 				default:
-					descuento = precio * 0.60;
+					descuento = 0.60;
      		}	break;
      	break;
      	case "Europa":
      		switch(formaDePago)
      		{
      			case "debito":
-     				descuento = precio * 0.35;
+     				descuento = 0.35;
      			break;
      			case "mercadopago":
-     				descuento = precio * 0.30;
+     				descuento = 0.30;
      			default:
-     				descuento = precio * 0.25;
+     				descuento = 0.25;
      			break;
 			}
 		break;
@@ -66,6 +66,7 @@ function mostrar()
 		break;
 	}
 
+	descuento = precio * descuento;
 	precio = precio - descuento;
 
 	alert("Precio final por vacacionar " +dias+ " días en " +continente+ " es de $ " +precio);
