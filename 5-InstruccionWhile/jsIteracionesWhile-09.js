@@ -24,24 +24,16 @@ function mostrar()
 			numeroIngresado = parseInt(numeroIngresado);
 		}
 
-		if(numeroIngresado ==false)
-		{	
-			numeroMaximo = numeroIngresado;
-			numeroMinimo = numeroIngresado;
-			banderaDelPrimero = true;
-		}
-		else
+		if(numeroIngresado > numeroMaximo || banderaDelPrimero ==false)
 		{
-			if(numeroIngresado > numeroMaximo);
-			{
-				numeroMaximo = numeroIngresado;
-			}
-			if(numeroIngresado < numeroMinimo)
-			{
-				numeroMinimo = numeroIngresado;
-			}
+			numeroMaximo = numeroIngresado;
 		}
-
+		if(numeroIngresado < numeroMinimo || banderaDelPrimero ==false)
+		{
+			numeroMinimo = numeroIngresado;
+			banderaDelPrimero = true; //Cambio la bandera
+		}
+		
 		respuesta= confirm("Desea continuar?");
 	}
 

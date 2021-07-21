@@ -31,12 +31,6 @@ function mostrar()
 		respuesta = confirm("Desea Continuar??");// Utilizo confirm para el cartel de aceptar o rechazar.
 	}
 
-
 	document.getElementById("txtIdSuma").value = acumulador;
 	document.getElementById("txtIdPromedio").value=acumulador/contador;
-
-
-
-
-
 }//FIN DE LA FUNCIÓN
