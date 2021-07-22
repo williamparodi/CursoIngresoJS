@@ -10,34 +10,97 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 function ComenzarIngreso () 
 {
  	var numeroIngresado;
- 	var contadorPares;
- 	var contadorImpares;
- 	var contadorDivisibles;
- 	var verificarPrimo;
- 	var contadorPrimo;
-
- 	contadorPares = 0;
- 	contadorImpares = 0;
- 	contadorDivisibles = 0;
- 	contadorPrimo = 0;
-
- 	numeroIngresado = document.getElementById("txtIdNumero").value;
- 	numeroIngresado = parseInt(numeroIngresado);
+ 	
+	
 
 	while(isNaN(numeroIngresado) || numeroIngresado <0)
  	{
  		alert("Ingrese solo numeros positivos");
  		numeroIngresado= document.getElementById("txtIdNumero").value;
  		numeroIngresado= parseInt(numeroIngresado);
+ 	}
+}
+function NumerosPares()
+{
+	var contadorPares;
+	var numeroIngresado;
+	var error;
 
- 		if(numeroIngresado %2==0)
+	contadorPares = 0;
+
+	numeroIngresado = document.getElementById("txtIdNumero").value;
+ 	numeroIngresado = parseInt(numeroIngresado);
+
+ 	while(isNaN(numeroIngresado) || numeroIngresado <0)
+ 	{
+ 		numeroIngresado = prompt("Error, ingrese numeros positivos");
+ 		numeroIngresado = parseInt(numeroIngresado);
+ 	}
+	if(numeroIngresado % 2 ==0)
+	{
+		contadorPares = numeroIngresado / 2;
+	}
+	else
+	{
+		while(numeroIngresado >0)
+		{
+			numeroIngresado = numeroIngresado - 2;
+			contadorPares = contadorPares + 1;
+		}
+	}
+
+	alert("La cantidad de numeros pares es de "+contadorPares);
+}
+function NumerosImpares()
+{
+	var contadorImpares;
+	var numeroIngresado;
+
+	contadorImpares = 0;
+
+	numeroIngresado = document.getElementById("txtIdNumero").value;
+	numeroIngresado = parseInt(numeroIngresado);
+
+	while(isNaN(numeroIngresado) || numeroIngresado <0)
+ 	{
+ 		numeroIngresado = prompt("Error, ingrese numeros positivos");
+ 		numeroIngresado = parseInt(numeroIngresado);
+ 	}
+ 	if(numeroIngresado %2 ==0)
+ 	{
+ 		while(numeroIngresado >0)
  		{
- 			numeroIngresado = numeroIngresado / 2;
- 			contadorPares = numeroIngresado;
+ 			numeroIngresado = numeroIngresado - 1;
+ 			contadorImpares = contadorImpares + 1;
+ 		} 
+ 	}
+ 	else
+ 	{
+ 		while(numeroIngresado>0)
+ 		{
+ 			numeroIngresado = numeroIngresado - 2;
+ 			contadorImpares = contadorImpares + 1;
  		}
  	}
- 	
- 	alert(contadorPares);
+
+ 	alert("La cantidad de numeros pares es de "+contadorImpares);
+
 }
+function NumerosDivisibles()
+{
+	var numeroIngresado;
+	var numerosDivisibles;
+
+	numerosDivisibles = 0;
+
+	while(isNaN(numeroIngresado) || numeroIngresado <0)
+ 	{
+ 		numeroIngresado = prompt("Error, ingrese numeros positivos");
+ 		numeroIngresado = parseInt(numeroIngresado);
+ 	}
+ 	
+
+}	
+
 
 //numeros positivos
