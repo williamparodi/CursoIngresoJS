@@ -61,8 +61,10 @@ function ComenzarIngreso ()
         case 3:
             estadoCivilIngresado = "Divorciado";
         break;
-        default:
+        case 4:
             estadoCivilIngresado = "Viudo";
+        break;
+        default:
         break;
     }
 

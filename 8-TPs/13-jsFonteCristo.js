@@ -7,46 +7,33 @@ c.	Se pedirán un número positivo y se mostrará la cantidad de números divisi
 d.	Se pedirán un número positivo y se mostrará si el número es un número primo o no.
 e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
 */
-function ComenzarIngreso () 
-{
- 	var numeroIngresado;
- 	
-	
-
-	while(isNaN(numeroIngresado) || numeroIngresado <0)
- 	{
- 		alert("Ingrese solo numeros positivos");
- 		numeroIngresado= document.getElementById("txtIdNumero").value;
- 		numeroIngresado= parseInt(numeroIngresado);
- 	}
-}
 function NumerosPares()
 {
 	var contadorPares;
 	var numeroIngresado;
-	var error;
-
+	
 	contadorPares = 0;
 
 	numeroIngresado = document.getElementById("txtIdNumero").value;
- 	numeroIngresado = parseInt(numeroIngresado);
-
- 	while(isNaN(numeroIngresado) || numeroIngresado <0)
+	numeroIngresado = parseInt(numeroIngresado);
+    
+	while(isNaN(numeroIngresado) || numeroIngresado <0)
  	{
  		numeroIngresado = prompt("Error, ingrese numeros positivos");
  		numeroIngresado = parseInt(numeroIngresado);
  	}
-	if(numeroIngresado % 2 ==0)
-	{
-		contadorPares = numeroIngresado / 2;
-	}
-	else
-	{
-		while(numeroIngresado >0)
+ 	while(numeroIngresado >0)
+ 	{
+ 		if(numeroIngresado % 2 ==0)
+		{
+			contadorPares = numeroIngresado / 2;
+		}
+		else
 		{
 			numeroIngresado = numeroIngresado - 2;
 			contadorPares = contadorPares + 1;
 		}
+		numeroIngresado = -1;
 	}
 
 	alert("La cantidad de numeros pares es de "+contadorPares);
@@ -83,24 +70,34 @@ function NumerosImpares()
  		}
  	}
 
- 	alert("La cantidad de numeros pares es de "+contadorImpares);
+ 	alert("La cantidad de numeros impares es de "+contadorImpares);
 
 }
 function NumerosDivisibles()
 {
 	var numeroIngresado;
-	var numerosDivisibles;
+    var contadorDivisibles;
 
-	numerosDivisibles = 0;
+    while(isNaN(numeroIngresado) || numeroIngresado <0)
+    {
+    	numeroIngresado = prompt("Error, ingrese un numero positivo");
+    	numeroIngresado = parseInt(numeroIngresado);
+    }
+  	
 
-	while(isNaN(numeroIngresado) || numeroIngresado <0)
- 	{
- 		numeroIngresado = prompt("Error, ingrese numeros positivos");
- 		numeroIngresado = parseInt(numeroIngresado);
- 	}
- 	
+    
 
+	
+	
 }	
+function VerificarPrimo()
+{
+	
 
+}
+function NumerosPrimos()
+{
+
+}
 
 //numeros positivos
