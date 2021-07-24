@@ -42,7 +42,7 @@ function ComenzarIngreso ()
     }
 
     estadoCivilIngresado = prompt("Ingrese estado civil 1: Soltero; 2: Casado ; 3: Divorciado 4: Viudos");
-    estadoCivilIngresado=parseInt(estadoCivilIngresado);
+    estadoCivilIngresado = parseInt(estadoCivilIngresado);
 
     while(isNaN(estadoCivilIngresado) && estadoCivilIngresado < 1 || estadoCivilIngresado > 4)
     {
@@ -64,8 +64,7 @@ function ComenzarIngreso ()
         case 4:
             estadoCivilIngresado = "Viudo";
         break;
-        default:
-        break;
+      
     }
 
     sueldoBruto = prompt("Ingrese sueldo");
@@ -100,7 +99,7 @@ function ComenzarIngreso ()
         case "e":
             nacionalidad = "Extranjero";
         break;
-        default:
+        case "n":
             nacionalidad = "Nacionalizado"
         break;
     }
