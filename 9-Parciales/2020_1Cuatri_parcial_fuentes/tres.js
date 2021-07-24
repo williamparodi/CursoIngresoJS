@@ -92,6 +92,7 @@ function mostrar()
 		if(sexo == "m" && estadoCivil == "Soltero")
 		{
 			cantidadHombresSolteros = cantidadHombresSolteros + 1;
+			edadHombreSolteros = edadHombreSolteros + edad;	
 		}
 		else
 		{
@@ -100,27 +101,17 @@ function mostrar()
 				cantidadHombresViudos = cantidadHombresViudos + 1;
 			}
 		}
-		if(estadoCivil == "Soltero")
-		{
-			edadHombreSolteros = edadHombreSolteros + edad;
-		}
-
-
-
-
-
-
-
-
-
+			
+		
 
 		repuesta=confirm("Desea Continuar?");
 	}
+	console.log(cantidadHombresSolteros);
 	promedioEdadSolteros = edadHombreSolteros / cantidadHombresSolteros;
 
-	document.write("El hombre con mas temperatura se llama :" + nombreTempMaxima+ " <br>");
+	document.write("La persona con mas temperatura se llama :" + nombreTempMaxima+ " <br>");
 	document.write("La cantidad de mayores de edad viudos es de : "+edadMayorViudo+ " <br>");
 	document.write("La cantidad de hombres viudos es de : " +cantidadHombresViudos+" <br>");
 	document.write("La cantidad de hombres solteros es de : " +cantidadHombresSolteros+" <br>");
-	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros+ " <br>");
+	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(1)+ " <br>");
 }
