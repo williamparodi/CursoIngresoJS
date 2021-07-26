@@ -41,6 +41,7 @@ function mostrar()
 		nombre =prompt("Ingrese nombre");
 		edad = prompt("Ingrese edad");
 		edad = parseInt(edad);
+
 		while(isNaN(edad) || edad < 0 || edad > 150)
 		{
 			edad = prompt("Error, Ingrese edad");
@@ -60,18 +61,7 @@ function mostrar()
 		{
 			estadoCivil = prompt("Error,Ingrese estado civil : S-Soltero,C-Casado o V-Viudo");
 		}
-		switch(estadoCivil)
-		{
-			case "s":
-				estadoCivil = "Soltero";
-			break;
-			case "c":
-				estadoCivil = "Casado";
-			break;
-			case "v":
-				estadoCivil = "Viudo";
-			break;
-		}
+
 		temp = prompt("Ingrese temperatura corporal");
 		temp = parseInt(temp);
 
@@ -79,39 +69,40 @@ function mostrar()
 		{
 			temp = prompt("Error,Ingrese temperatura corporal");
 		}
+
 		if(temp > tempMaxima || banderaPrimerTemp ==false)
 		{
 			tempMaxima = temp;
 			nombreTempMaxima = nombre;
 			banderaPrimerTemp = true;
 		}
-		if(edad >59 && estadoCivil == "Viudo")
+
+		if(edad >59 && estadoCivil == "v")
 		{
 			edadMayorViudo = edadMayorViudo + 1;
 		}
-		if(sexo == "m" && estadoCivil == "Soltero")
+
+		if(sexo == "m" && estadoCivil == "s")
 		{
 			cantidadHombresSolteros = cantidadHombresSolteros + 1;
 			edadHombreSolteros = edadHombreSolteros + edad;	
 		}
 		else
 		{
-			if(sexo == "m" && estadoCivil == "Viudo")
+			if(sexo == "m" && estadoCivil == "v")
 			{
 				cantidadHombresViudos = cantidadHombresViudos + 1;
 			}
 		}
 			
-		
-
 		repuesta=confirm("Desea Continuar?");
 	}
-	console.log(cantidadHombresSolteros);
+
 	promedioEdadSolteros = edadHombreSolteros / cantidadHombresSolteros;
 
 	document.write("La persona con mas temperatura se llama :" + nombreTempMaxima+ " <br>");
 	document.write("La cantidad de mayores de edad viudos es de : "+edadMayorViudo+ " <br>");
 	document.write("La cantidad de hombres viudos es de : " +cantidadHombresViudos+" <br>");
 	document.write("La cantidad de hombres solteros es de : " +cantidadHombresSolteros+" <br>");
-	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(1)+ " <br>");
+	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(0)+ " <br>");
 }

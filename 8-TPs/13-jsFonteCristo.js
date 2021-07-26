@@ -22,19 +22,15 @@ function NumerosPares()
  		numeroIngresado = prompt("Error, ingrese numeros positivos");
  		numeroIngresado = parseInt(numeroIngresado);
  	}
- 	while(numeroIngresado >0)
+ 	while(numeroIngresado>0)
  	{
- 		if(numeroIngresado % 2 ==0)
-		{
-			contadorPares = numeroIngresado / 2;
-		}
-		else
-		{
-			numeroIngresado = numeroIngresado - 2;
-			contadorPares = contadorPares + 1;
-		}
-		numeroIngresado = -1;
-	}
+ 		if(numeroIngresado % 2==0)
+ 		{
+ 			contadorPares = contadorPares + 1;
+ 		}
+
+ 		numeroIngresado = numeroIngresado -1;
+ 	}
 
 	alert("La cantidad de numeros pares es de "+contadorPares);
 }
@@ -48,26 +44,19 @@ function NumerosImpares()
 	numeroIngresado = document.getElementById("txtIdNumero").value;
 	numeroIngresado = parseInt(numeroIngresado);
 
+
 	while(isNaN(numeroIngresado) || numeroIngresado <0)
  	{
  		numeroIngresado = prompt("Error, ingrese numeros positivos");
  		numeroIngresado = parseInt(numeroIngresado);
  	}
- 	if(numeroIngresado %2 ==0)
- 	{
- 		while(numeroIngresado >0)
+ 	while(numeroIngresado >0)
+ 	{	
+ 		if(numeroIngresado % 2 !=0)
  		{
- 			numeroIngresado = numeroIngresado - 1;
- 			contadorImpares = contadorImpares + 1;
- 		} 
- 	}
- 	else
- 	{
- 		while(numeroIngresado>0)
- 		{
- 			numeroIngresado = numeroIngresado - 2;
- 			contadorImpares = contadorImpares + 1;
+ 		  contadorImpares = contadorImpares + 1;
  		}
+ 		numeroIngresado = numeroIngresado - 1;
  	}
 
  	alert("La cantidad de numeros impares es de "+contadorImpares);
@@ -77,26 +66,114 @@ function NumerosDivisibles()
 {
 	var numeroIngresado;
     var contadorDivisibles;
+    var i;
+
+    i = 100;
+
+	contadorDivisibles = 0;
+
+	numeroIngresado = document.getElementById("txtIdNumero").value;
+	numeroIngresado = parseInt(numeroIngresado);
 
     while(isNaN(numeroIngresado) || numeroIngresado <0)
     {
     	numeroIngresado = prompt("Error, ingrese un numero positivo");
     	numeroIngresado = parseInt(numeroIngresado);
     }
-  	
+  	while(i >0)
+  	{
+  		if(numeroIngresado % i == 0)
+  		{
+  			contadorDivisibles = contadorDivisibles + 1;
+  		}	
+  		i = i - 1;
+  	}
+  	alert("La cantidad de numeros divisibles es de : " + contadorDivisibles);
+}
 
-    
-
-	
-	
-}	
 function VerificarPrimo()
 {
-	
+	var numeroIngresado;
+	var contador;
+	var i;
 
-}
+	i = 0;
+	contador = 0;
+	
+	numeroIngresado = document.getElementById("txtIdNumero").value;
+	numeroIngresado = parseInt(numeroIngresado);
+
+    while(isNaN(numeroIngresado) || numeroIngresado <2)
+    {
+    	numeroIngresado = prompt("Error, ingrese un numero positivo mayor que 1");
+    	numeroIngresado = parseInt(numeroIngresado);
+    }
+  	
+   	while(numeroIngresado > 0)
+    {
+		while(i<= numeroIngresado)
+		{
+			if(numeroIngresado % 2 == 0)
+			{
+				contador = contador + 1;
+			}
+			i = i + 1
+		}
+		numeroIngresado = numeroIngresado - 1;
+	}
+	if(contador == 2)
+	{
+		alert("es primo");
+	}
+	else
+	{
+		alert("no es primo");
+	}
+   		
+}	
 function NumerosPrimos()
 {
+	var numeroIngresado;
+	var acumuladorPrimos;
+	var contador;
+	var i;
+
+	i = 0;
+	contador = 0;
+	
+
+	numeroIngresado = document.getElementById("txtIdNumero").value;
+	numeroIngresado = parseInt(numeroIngresado);
+
+    while(isNaN(numeroIngresado) || numeroIngresado <2)
+    {
+    	numeroIngresado = prompt("Error, ingrese un numero positivo");
+    	numeroIngresado = parseInt(numeroIngresado);
+    }
+
+    while(numeroIngresado > 0)
+    {
+		while(i<= numeroIngresado)
+		{
+			if(numeroIngresado % 2 == 0)
+			{
+				contador = contador + 1;
+			}
+			i = i + 1
+		}
+		numeroIngresado = numeroIngresado - 1;
+	}
+	if(contador == 2)
+	{
+
+		alert("es primo");
+	}
+	else
+	{
+		alert("no es primo");
+	}
+
+
 
 }
 

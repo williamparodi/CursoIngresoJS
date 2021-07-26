@@ -1,137 +1,120 @@
-/*Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
-Tipo validad("arena";"cal";"cemento")
-Cantidad de bolsas,
-Precio por bolsa (más de cero ),
-
-Si compro más de 10 bolsas en total tenes 15% de descuento sobre el total a pagar.
-Si compro más de 30 bolsas en total tenes 25% de descuento sobre el total a pagar.
-a) El importe total a pagar , bruto sin descuento y...
-b) el importe total a pagar con descuento(solo si corresponde)
-d) Informar el tipo con mas cantidad de bolsas.
-f) El tipo mas caro*/
-
 function mostrar()
 {
   var material;
   var cantidad;
   var precioBolsa;
+  var precioMasCaro;
   var respuesta;
-  var descuento;
-  var acumuladorBolsas;
-  var acumuladorCal;
-  var acumuladorArena;
-  var acumuladorCemento;
-  var precioTotal;
+  var totalBolsas;
+  var bolsasCemento;
+  var bolsasCal;
+  var bolsasArena;
+  var materialMasCaro;
+  var banderaPrimerCaro;
+  var precioMaterial;
+  var precioBruto;
   var precioDesc;
-  var banderaDelPrimero;
-  var materialMasCAro;
-  var precioMatetrialCaro;
 
   respuesta = true;
-
-  
-  acumuladorBolsas = 0;
-  acumuladorCemento = 0;
-  acumuladorArena = 0;
-  acumuladorCal = 0;
-  precioTotal = 0;
-  banderaDelPrimero = true;
-  
-
+  bolsasCemento = 0;
+  bolsasCal = 0;
+  bolsasArena = 0;
+  precioBolsaCaro = 0;
+  materialMasCaro = 0;
+  precioBruto = 0;
+  banderaPrimerCaro = false;
 
   while(respuesta == true)
   {
-
-    material = prompt("Bienvenido; Ingrese el material: Arena, Cal o Cemento");
-
-    while(material != "arena" && material != "cal" && material != "cemento")
+    material = prompt("Ingrese el material deseado : Cemento , cal o arena");
+    while(material != "cemento" && material != "cal" && material != "arena")
     {
-      material = prompt("Error,Ingrese el material: Arena, Cal o Cemento");
+      material = prompt("Error;ingrese el material deseado : Cemento , cal o arena");
     }
 
-    cantidad = prompt("Ingrese cantidad de bolsas");
+    cantidad = prompt("Ingrese la cantidad de bolsas");
     cantidad = parseInt(cantidad);
 
     while(isNaN(cantidad))
     {
-      cantidad = prompt("Error,Ingrese cantidad de bolsas");
+      cantidad = prompt("Error;Ingrese la cantidad de bolsas");
+      cantidad = parseInt(cantidad);
     }
 
-    precioBolsa = prompt("Ingrese precio por bolsa");
+    precioBolsa = prompt("Ingrese el precio por bolsa");
     precioBolsa = parseInt(precioBolsa);
-
+    
     while(isNaN(precioBolsa) || precioBolsa <1)
     {
-      precioBolsa = prompt("Error; Ingrese precio por bolsa");
+      precioBolsa = prompt("Error,Ingrese el precio por bolsa");
       precioBolsa = parseInt(precioBolsa);
     }
-
     switch(material)
     {
-      case "arena":
-        acumuladorArena = acumuladorArena + cantidad;
+      case "cemento":
+        bolsasCemento = bolsasCemento + cantidad;
       break;
       case "cal":
-        acumuladorCal = acumuladorCal + cantidad;
+        bolsasCal = bolsasCal + cantidad;
       break;
-      case "cemento":
-        acumuladorCemento = acumuladorCemento + cantidad;
+      case "arena":
+        bolsasArena = bolsasArena + cantidad;
       break;
     }
-    
-    
 
-    
+    precioMaterial = precioBolsa * cantidad;
+    precioBruto = precioBruto + precioMaterial; 
 
-    respuesta = confirm("Desea Continuar?");
-
-
-  }
-
-  acumuladorBolsas= acumuladorArena + acumuladorArena + acumuladorCemento;
-  precioTotal = cantidad * precioBolsa;
-  console.log(acumuladorBolsas);
-  console.log(precioTotal);
-
-  if(acumuladorArena > acumuladorCemento && acumuladorArena > acumuladorCal)
-  {
-    document.write("El mayor numero de bolsas es de arena <br>");
-  }
-  else
-  {
-    if(acumuladorCemento > acumuladorArena && acumuladorCemento > acumuladorCal)
+    if(precioBolsa > precioMasCaro ||banderaPrimerCaro==false)
     {
-      document.write("El mayor numero de bolsas es de cemento <br>");
-    }
-    else
-    {
-      document.write("El mayor numero de bolsas es de cal <br>");
+      precioMasCaro = precioBolsa;
+      materialMasCaro = material;
+      banderaPrimerCaro = true;
     } 
-  } 
-  if(acumuladorBolsas >9 && acumuladorBolsas < 30)
+
+    
+    respuesta = confirm("Desea continuar?");
+  }
+
+  totalBolsas = bolsasCemento + bolsasCal + bolsasArena;
+
+  document.write("El precio bruto es de $: "+precioBruto+ " <br>");
+
+  if(totalBolsas > 30)
   {
-    descuento = 0.15;
+    descuento = 0.25
   }
   else
   {
-    if(acumuladorBolsas >30)
+    if(totalBolsas > 10 && totalBolsas < 30)
     {
-      descuento = 0.25;
+      descuento = 0.15
     }
     else
     {
       descuento = 0;
-    }
+    }    
   }
   if(descuento != 0)
   {
-    precioDesc = precioTotal * descuento;
-    document.write("El precio con descuento es de : "+precioDesc+" <br>");
+    descuento = precioBruto * descuento;
+    precioDesc = precioBruto - descuento;
+    document.write("El precio con descuento es de $: "+precioDesc+ " <br>");
+  }
+  if(bolsasCemento > bolsasArena && bolsasCemento > bolsasCal)
+  {
+    document.write("El material con mas bolsas es el cemento con : " +bolsasCemento+ " <br>");
   }
   else
   {
-    document.write("El precio bruto es de "+precioTotal+" <br>");
-  }
-
-  document.write("El material mas caro fue "+materialMasCaroPrecio+ " <br>");
+    if(bolsasArena > bolsasCemento && bolsasArena > bolsasCal)
+    {
+      document.write("El material con mas bolsas es el arena con : "+bolsasArena+ " <br>");
+    }
+    else
+    {
+      document.write("El material con mas unidades es cal con : "+bolsasCal+ " <br>");
+    }
+  } 
+  document.write("El material mas caro es el : "+materialMasCaro+ " <br>")
 }
