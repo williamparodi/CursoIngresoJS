@@ -31,7 +31,6 @@ function mostrar()
   bolsasCal = 0;
   bolsasArena = 0;
   precioBolsaCaro = 0;
-  materialMasCaro = 0;
   precioBruto = 0;
   banderaPrimerCaro = false;
 

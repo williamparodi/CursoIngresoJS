@@ -34,11 +34,8 @@ function mostrar()
 	contadorJabon = 0;
 	contadorAlcohol = 0;
 	contadorBarbijo = 0;
-	fabricanteAlcoholBarato = 0;
 	contadorAlcoholBarato = 0;
-	cantidadComprasTipo = 0;
 	cantidadMaxima = 0;
-	comprasMaximas = 0;
 	precioCompra = 0;
 	banderaPrimerCantidad = false;
 	banderaPrecioMinino = true;
@@ -78,6 +75,13 @@ function mostrar()
 			case "a":
 				tipo = "alcohol";
 				contadorAlcohol = contadorAlcohol + cantidad;
+				if(precio < precioMinino || banderaPrecioMinino ==true)
+				{
+					precioMinino = precio;
+					fabricanteAlcoholBarato = fabricante;
+					contadorAlcoholBarato = cantidad;
+					banderaPrecioMinino = false;
+				}
 			break;
 			case "b":
 				tipo = "barbijo";
@@ -89,27 +93,19 @@ function mostrar()
 			break;
 		}		
 
-		if(precio < precioMinino && tipo == "a" || banderaPrecioMinino ==true)
-		{
-			precioMinino = precio;
-			fabricanteAlcoholBarato = fabricante;
-			contadorAlcoholBarato = cantidad;
-			banderaPrecioMinino = false;
-		}
-		
 		if(cantidad > cantidadMaxima || banderaPrimerCantidad ==false)
 		{
 			cantidadMaxima = cantidad;
 			tipoMasUnidades = tipo;
 			precioCompra = precioCompra + precio;
-			comprasMaximas = comprasMaximas +1;
+			comprasMaximas = comprasMaximas + 1;
 			banderaPrimerCantidad = true;
 		}
 
 		contador = contador + 1;
 	}
 
-	promedioCompra = precioCompra / comprasMaximas; 
+	promedioCompra = precioCompra / cantidadMaxima; 
 
 	
 	document.write("Tipo con mas unidades "+tipoMasUnidades +" con un promedio por compra de "+promedioCompra+" <br>");

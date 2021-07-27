@@ -113,7 +113,7 @@ function VerificarPrimo()
     {
 		while(i<= numeroIngresado)
 		{
-			if(numeroIngresado % 2 == 0)
+			if(numeroIngresado % i == 0)
 			{
 				contador = contador + 1;
 			}
@@ -134,12 +134,13 @@ function VerificarPrimo()
 function NumerosPrimos()
 {
 	var numeroIngresado;
-	var acumuladorPrimos;
+	var contadorPrimos;
 	var contador;
 	var i;
 
 	i = 0;
 	contador = 0;
+	contadorPrimos = 0;
 	
 
 	numeroIngresado = document.getElementById("txtIdNumero").value;
@@ -162,17 +163,9 @@ function NumerosPrimos()
 			i = i + 1
 		}
 		numeroIngresado = numeroIngresado - 1;
-	}
-	if(contador == 2)
-	{
 
-		alert("es primo");
 	}
-	else
-	{
-		alert("no es primo");
-	}
-
+		
 
 
 }

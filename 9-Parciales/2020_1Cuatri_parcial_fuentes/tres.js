@@ -1,9 +1,9 @@
 /*Bienvenidos.
 En el ingreso a un viaje en avion nos solicitan nombre , edad, sexo("f" o "m") y estado civil("soltero", "casado" o "viudo")y temperatura corporal.
-a) El nombre de la persona con mas temperatura.(x)
-b) Cuantos mayores de edad estan viudos(X)
-c) La cantidad de hombres que hay solteros o viudos.(x)
-d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura(X)
+a) El nombre de la persona con mas temperatura.
+b) Cuantos mayores de edad estan viudos
+c) La cantidad de hombres que hay solteros o viudos.
+d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
 e) El promedio de edad entre los hombres solteros.*/
 
 function mostrar()
@@ -39,6 +39,7 @@ function mostrar()
 	while(repuesta==true)
 	{
 		nombre =prompt("Ingrese nombre");
+
 		edad = prompt("Ingrese edad");
 		edad = parseInt(edad);
 
@@ -98,11 +99,19 @@ function mostrar()
 		repuesta=confirm("Desea Continuar?");
 	}
 
-	promedioEdadSolteros = edadHombreSolteros / cantidadHombresSolteros;
-
+	if(cantidadHombresSolteros !=0)
+	{
+		promedioEdadSolteros = edadHombreSolteros / cantidadHombresSolteros;
+	}
+	else
+	{
+		promedioEdadSolteros = 0;
+	}
+	
+	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(0)+ " <br>");
 	document.write("La persona con mas temperatura se llama :" + nombreTempMaxima+ " <br>");
 	document.write("La cantidad de mayores de edad viudos es de : "+edadMayorViudo+ " <br>");
 	document.write("La cantidad de hombres viudos es de : " +cantidadHombresViudos+" <br>");
 	document.write("La cantidad de hombres solteros es de : " +cantidadHombresSolteros+" <br>");
-	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(0)+ " <br>");
+	
 }
