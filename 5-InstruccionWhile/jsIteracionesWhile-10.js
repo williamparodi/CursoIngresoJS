@@ -126,7 +126,7 @@ hasta que el usuario quiera, mostrar:
 6-Cantidad de números pares.
 7-Promedio de positivos.
 8-Promedios de negativos.
-9-Diferencia entre positivos y negativos, (positvos-negativos). */
+9-Diferencia entre positivos y negativos, (positvos-negativos). 
 function mostrar()
 {	
     var numeroIngresado;
@@ -218,4 +218,4 @@ function mostrar()
 		document.write("Promedio de los positivos : no se pudo calcular <br>");
 	}
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN*/

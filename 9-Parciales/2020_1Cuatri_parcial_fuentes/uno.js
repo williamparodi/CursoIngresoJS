@@ -98,7 +98,6 @@ function mostrar()
 			cantidadMaxima = cantidad;
 			tipoMasUnidades = tipo;
 			precioCompra = precioCompra + precio;
-			comprasMaximas = comprasMaximas + 1;
 			banderaPrimerCantidad = true;
 		}
 

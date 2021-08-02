@@ -102,13 +102,14 @@ function mostrar()
 	if(cantidadHombresSolteros !=0)
 	{
 		promedioEdadSolteros = edadHombreSolteros / cantidadHombresSolteros;
+		document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(0)+ " <br>");
 	}
 	else
 	{
-		promedioEdadSolteros = 0;
+		document.write("No se pudo calcular <br>");
 	}
 	
-	document.write("La edad promedio de hombre solteros es de "+promedioEdadSolteros.toFixed(0)+ " <br>");
+	
 	document.write("La persona con mas temperatura se llama :" + nombreTempMaxima+ " <br>");
 	document.write("La cantidad de mayores de edad viudos es de : "+edadMayorViudo+ " <br>");
 	document.write("La cantidad de hombres viudos es de : " +cantidadHombresViudos+" <br>");
