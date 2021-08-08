@@ -82,19 +82,31 @@ function mostrar()
 			banderaDelPrimerMaximo = false;
 		}
 
-		if(tipo == "trampa" && rareza =="rara"|| rareza =="super rara")
+		switch(tipo)
 		{
-			contadorTrampaRaraSuper = contadorTrampaRaraSuper + 1;
-		}
-		if(tipo =="trampa")
-		{
-			if(rareza =="")
-		}
+			case "trampa":
+				if(rareza =="rara")
+				{
+					contadorTrampaRaraSuper = contadorTrampaRaraSuper + 1;
+				}
+				else
+				{
+					if(rareza =="super rara")
+					{
+						contadorTrampaRaraSuper = contadorTrampaRaraSuper + 1;
+					}
+				}
+			break;
+			case "monstruo":
+				if(rareza == "ultra rara" && precio <500)
+				{
+					contadorMonstruoUltra = contadorMonstruoUltra + 1;
+					precioMonstruo = precioMonstruo + precio;
+				}
+			break;
+			default:
+			break;
 
-		if(tipo == "monstruo"&& rareza == "ultra rara" && precio < 500)
-		{
-			contadorMonstruoUltra = contadorMonstruoUltra + 1;
-			precioMonstruo = precioMonstruo + precio;
 		}
 
 		respuesta = confirm("Desea continuar??");
