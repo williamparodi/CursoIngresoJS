@@ -25,6 +25,150 @@ function mostrar()
 	var precio;
 	var respuesta;
 
+	//a
+	var	nombreMayorPrecio;
+	var rarezaMayorPrecio;
+	var precioMaximo;
+	var banderaDelPrimero;
+
+	var contadorTrampaRaraSuper;
+
+	//c
+	var contadorMonstruoUltarara;
+	var acumuladorPrecio;
+	var promedioPrecio;
+
+
+	respuesta = true;
+	banderaDelPrimero = true;
+	contadorTrampaRaraSuper = 0;
+	contadorMonstruoUltarara = 0;
+	acumuladorPrecio = 0;
+
+	while(respuesta == true)
+	{
+
+		nombre = prompt("Ingrese nombre");
+
+		tipo = prompt("Ingrese Tipo de carta :monstruo, magica, trampa");
+
+		while(tipo != "monstruo" && tipo != "magica" && tipo != "trampa")
+		{
+			tipo = prompt("Error;Ingrese Tipo de carta :monstruo, magica, trampa");
+		}
+
+		rareza = prompt("ingrese rareza : rara, super rara, ultra rara");
+
+		while(rareza != "rara"&& rareza != "super rara" && rareza != "ultra rara")
+		{
+			rareza = prompt("Error;ingrese rareza : rara, super rara, ultra rara");
+		}
+		precio = prompt("ingrese precio");
+		precio = parseInt(precio);
+
+		while(isNaN(precio)|| precio <1)
+		{
+			precio = prompt("Error;ingrese precio");
+			precio = parseInt(precio);
+		}
+
+		if(precio > precioMaximo || banderaDelPrimero == true)
+		{
+			precioMaximo = precio;
+			nombreMayorPrecio = nombre;
+			rarezaMayorPrecio = rareza;
+			banderaDelPrimero = false;
+		}
+
+		switch(tipo)
+		{
+			case "trampa":
+				if(rareza == "rara"|| rareza =="super rara")
+				{
+					contadorTrampaRaraSuper = contadorTrampaRaraSuper + 1;
+				}
+			break;
+			case "monstruo":
+				if(rareza == "ultra rara" && precio<500)
+				{
+					contadorMonstruoUltarara = contadorMonstruoUltarara + 1;
+					acumuladorPrecio = acumuladorPrecio + precio;
+				}
+			break;
+		}
+
+		respuesta = confirm("Desea continuar?");
+	}
+
+	document.write("El nombre de la carta mas cara es : "+nombreMayorPrecio+ "y es de rareza : "+ rarezaMayorPrecio+ " <br>");
+
+	if(contadorTrampaRaraSuper != 0)
+	{
+		document.write("La cantidad de cartas trampa rara o super rara es de : "+contadorTrampaRaraSuper+ " <br>");
+	}
+	else
+	{
+		document.write("no se compraron cartas trampa con esa rareza <br>");
+	}
+	if(contadorMonstruoUltarara !=0)
+	{
+		promedioPrecio = acumuladorPrecio / contadorMonstruoUltarara;
+		document.write("El precio promedio de las cartas Montruo ultra rara es : "+promedioPrecio+ " <br>");
+	}
+	else
+	{
+		document.write("no se compraron cartas de ese tipo <br>");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+	var nombre;
+	var tipo;
+	var rareza;
+	var precio;
+	var respuesta;
+
 	var nombreMayorPrecio;
 	var rarezaMayorPrecio;
 	var banderaDelPrimerMaximo;
@@ -123,6 +267,6 @@ function mostrar()
 	else
 	{
 		document.write("Sin cartas solicitado");
-	}
+	} */
 
 }//FIN DE LA FUNCIÓN

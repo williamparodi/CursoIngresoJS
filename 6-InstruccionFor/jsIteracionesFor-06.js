@@ -162,7 +162,7 @@ function mostrar()
 	{
 		porcentajeLectura = (contadorAlumnosLengua * 100) / 10;
 		promedioNotasLectura = acumuladorNotasLectura / contadorAlumnosLengua;
-		porcentajeAprobadosLengua = (contadorAprobadosLengua * 100) / contadorAlumnosLengua;
+		porcentajeAprobadosLengua = (contadorAprobadosLengua * 100) / contadorAlumnosLengua; // Podria ir otro if para no mostrar algo vacio
 		porcentajeDesaprobadosLengua = (contadorDesaprobadosLengua * 100) / contadorAlumnosLengua;
 		document.write("El promedio de notas de lectura es de : "+promedioNotasLectura+ " <br>");
 		document.write("El % de alumnos que rindieron  lectura es : "+porcentajeLectura+ " <br>");
